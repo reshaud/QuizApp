@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Please Enter Your Name"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp"
+            android:textSize="20sp"
+            android:id="@+id/name" />
+
+        <TextView
+            android:id="@+id/q1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Question 1"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:textAllCaps="true"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_marginRight="16dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/q1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/view" />
+
+        <TextView
+            android:id="@+id/q1Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Which of the following correctly declares an array ?"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="16dp" />
+
+        <RadioGroup
+            android:id="@+id/q1Answers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/q1Text"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <RadioButton
+                android:id="@+id/q1AnswerA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="16dp"
+                android:text="int cake[10];" />
+
+            <RadioButton
+                android:id="@+id/q1AnswerB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="int cake;"
+                android:paddingLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/q1AnswerC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingLeft="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="cake {10};"/>
+
+            <RadioButton
+                android:id="@+id/q1AnswerD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="array cake[10];"
+                android:paddingLeft="16dp"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/q2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Question 2"
+            app:layout_constraintTop_toBottomOf="@+id/q1Answers"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textAllCaps="true"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/q2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            />
+
+
+
+
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+
+
