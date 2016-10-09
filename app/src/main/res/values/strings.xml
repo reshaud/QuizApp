@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">C++ Quiz App</string>
+    <string name="enter_name">Please Enter Your Name</string>
+    <string name="question_1">Question 1</string>
+    <string name="question_2">Question 2</string>
+    <string name="question_3">Question 3</string>
+    <string name="question_4">Question 4</string>
+    <string name="question_5">Question 5</string>
+    <string name="question_1_text">Which of the following correctly declares an array ?</string>
+    <string name="question_1_answerA">A. int cake[10];</string>
+    <string name="question_1_answerB">B. int cake;</string>
+    <string name="question_1_answerC">C. cake {10};</string>
+    <string name="question_1_answerD">D. array cake[10];</string>
+    <string name="question_2_text">Which of the following are vaild c++ statements ?</string>
+    <string name="question_2_answerA">A. double money = 2.2;</string>
+    <string name="question_2_answerB">B. Float maths = 1.5</string>
+    <string name="question_2_answerC">C. String hi = hello;</string>
+    <string name="question_2_answerD">D. boolean male = true;</string>
+    <string name="question_3_text">Which of the following are mandatory parts of a function declaration ?</string>
+    <string name="question_3_answerA">A. return type, function name and parameters</string>
+    <string name="question_3_answerB">B. function name and return type</string>
+    <string name="question_3_answerC">C. both A and B</string>
+    <string name="question_3_answerD">D. none of the above</string>
+    <string name="question_4_text">Which of the following variable scopes exist in c++ ?</string>
+    <string name="question_4_answerA">A. universal scope</string>
+    <string name="question_4_answerB">B. local scope</string>
+    <string name="question_4_answerC">C. global scope</string>
+    <string name="question_4_answerD">D. geometrical scope</string>
+    <string name="question_5_text">What is the last index number of an array with 20 elements ?</string>
+    <string name="question_5_answer">Enter Answer for Question 5</string>
+    <string name="grade">Grade Quiz</string>
 </resources>

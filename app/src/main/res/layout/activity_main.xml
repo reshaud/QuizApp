@@ -15,61 +15,35 @@
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/any_width"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:hint="Please Enter Your Name"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:hint="@string/enter_name"
             android:maxLines="1"
-            android:textSize="20sp"
+            android:textSize="@dimen/question_title_textSize"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/q1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:gravity="center_horizontal"
-            android:text="Question 1"
-            android:textAllCaps="true"
-            android:textSize="20sp"
+            style="@style/QuestionTitle"
+            android:text="@string/question_1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
 
         <View
             android:id="@+id/view"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:background="@android:color/darker_gray"
+            style="@style/LineStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q1" />
 
         <TextView
             android:id="@+id/q1Text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Which of the following correctly declares an array ?"
-            android:textSize="16sp"
+            style="@style/QuestionText"
+            android:text="@string/question_1_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -78,165 +52,110 @@
             android:id="@+id/q1Answers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q1Text">
 
             <RadioButton
                 android:id="@+id/q1AnswerA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="16dp"
-                android:text="A. int cake[10];"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:text="@string/question_1_answerA" />
 
             <RadioButton
                 android:id="@+id/q1AnswerB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="16dp"
-                android:text="B. int cake;"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:text="@string/question_1_answerB" />
 
             <RadioButton
                 android:id="@+id/q1AnswerC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="16dp"
-                android:text="C. cake {10};"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:text="@string/question_1_answerC" />
 
             <RadioButton
                 android:id="@+id/q1AnswerD"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:text="D. array cake[10];"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:text="@string/question_1_answerD" />
         </RadioGroup>
 
         <TextView
             android:id="@+id/q2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center_horizontal"
-            android:text="Question 2"
-            android:textAllCaps="true"
-            android:textSize="20sp"
+            style="@style/QuestionTitle"
+            android:text="@string/question_2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q1Answers" />
 
         <View
             android:id="@+id/view2"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@android:color/darker_gray"
+            style="@style/LineStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2" />
 
         <TextView
             android:id="@+id/q2Text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Which of the following are vaild c++ statements ?"
-            android:textSize="16sp"
+            style="@style/QuestionText"
+            android:text="@string/question_2_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view2" />
 
         <CheckBox
             android:id="@+id/q2AnswerA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:paddingLeft="16dp"
-            android:text="A. double money = 2.2;"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="@string/question_2_answerA"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2Text" />
 
         <CheckBox
             android:id="@+id/q2AnswerB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:paddingLeft="16dp"
-            android:text="B. Float maths = 1.5;"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:text="@string/question_2_answerB"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerA" />
 
         <CheckBox
             android:id="@+id/q2AnswerC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:paddingLeft="16dp"
-            android:text="C. String hi = hello;"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:text="@string/question_2_answerC"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerB" />
 
         <CheckBox
             android:id="@+id/q2AnswerD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:paddingLeft="16dp"
-            android:text="D. boolean male = true;"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:text="@string/question_2_answerD"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerC" />
 
         <TextView
             android:id="@+id/q3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center_horizontal"
-            android:text="Question 3"
-            android:textAllCaps="true"
-            android:textSize="20sp"
+            style="@style/QuestionTitle"
+            android:text="@string/question_3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerD" />
 
         <View
             android:id="@+id/view3"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@android:color/darker_gray"
+            style="@style/LineStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q3" />
 
         <TextView
             android:id="@+id/q3Text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Which of the following are mandatory parts of a function declaration ?"
-            android:textSize="16sp"
+            style="@style/QuestionText"
+            android:text="@string/question_3_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view3" />
@@ -245,190 +164,134 @@
             android:id="@+id/q3Answers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q3Text">
 
             <RadioButton
                 android:id="@+id/q3AnswerA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="16dp"
-                android:text="A. return type, function name and parameters"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:text="@string/question_3_answerA" />
 
             <RadioButton
                 android:id="@+id/q3AnswerB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="16dp"
-                android:text="B. function name and return type"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:text="@string/question_3_answerB" />
 
             <RadioButton
                 android:id="@+id/q3AnswersC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="16dp"
-                android:text="C. both A and B"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:layout_marginBottom="@dimen/margin_bottom"
+                android:text="@string/question_3_answerC" />
 
             <RadioButton
                 android:id="@+id/q3AnswerD"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="16dp"
-                android:text="D. none of the above"
-                android:textSize="16sp" />
+                style="@style/RadioButtonStyle"
+                android:text="@string/question_3_answerD" />
 
         </RadioGroup>
 
         <TextView
             android:id="@+id/q4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center_horizontal"
-            android:text="Question 4"
-            android:textAllCaps="true"
-            android:textSize="20sp"
+            style="@style/QuestionTitle"
+            android:text="@string/question_4"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q3Answers" />
 
         <View
             android:id="@+id/view4"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@android:color/darker_gray"
+            style="@style/LineStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4" />
 
         <TextView
             android:id="@+id/q4Text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Which of the following variable scopes exist in c++ ?"
-            android:textSize="16sp"
+            style="@style/QuestionText"
+            android:text="@string/question_4_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view4" />
 
         <CheckBox
             android:id="@+id/q4AnswerA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:paddingLeft="16dp"
-            android:text="A. universal scope"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/question_4_answerA"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4Text" />
 
         <CheckBox
             android:id="@+id/q4AnswerB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/CheckBoxStyle"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:paddingLeft="16dp"
-            android:text="B. local scope"
-            android:textSize="16sp"
+            android:text="@string/question_4_answerB"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerA" />
 
         <CheckBox
             android:id="@+id/q4AnswerC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:paddingLeft="16dp"
-            android:text="C. global scope"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:text="@string/question_4_answerC"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerB" />
 
         <CheckBox
             android:id="@+id/q4AnswerD"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:paddingLeft="16dp"
-            android:text="D. geometrical scope"
-            android:textSize="16sp"
+            style="@style/CheckBoxStyle"
+            android:text="@string/question_4_answerD"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerC" />
 
         <TextView
             android:id="@+id/q5"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center_horizontal"
-            android:text="Question 5"
-            android:textAllCaps="true"
-            android:textSize="20sp"
+            style="@style/QuestionTitle"
+            android:text="@string/question_5"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerD" />
 
         <View
             android:id="@+id/view5"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="@android:color/darker_gray"
+            style="@style/LineStyle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q5" />
 
         <TextView
             android:id="@+id/q5Text"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:text="What is the last index number of an array with 20 elements ?"
-            android:textSize="16sp"
+            style="@style/QuestionText"
+            android:text="@string/question_5_text"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view5" />
 
         <EditText
             android:id="@+id/q5Answer"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/any_width"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp"
-            android:hint="Enter Answer for Question 5"
-            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/question_5_answer"
+            android:textSize="@dimen/body_textSize"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q5Text" />
 
         <Button
             android:id="@+id/gradeQuiz"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/any_width"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Grade Quiz"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/grade"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q5Answer" />
