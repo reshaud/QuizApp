@@ -20,6 +20,8 @@
             android:layout_margin="@dimen/activity_horizontal_margin"
             android:hint="@string/enter_name"
             android:maxLines="1"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
             android:textSize="@dimen/question_title_textSize"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -50,12 +52,15 @@
 
         <RadioGroup
             android:id="@+id/q1Answers"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/any_width"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q1Text">
 
             <RadioButton
@@ -112,6 +117,7 @@
             android:layout_marginTop="@dimen/activity_horizontal_margin"
             android:text="@string/question_2_answerA"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2Text" />
 
         <CheckBox
@@ -120,6 +126,7 @@
             android:layout_marginBottom="@dimen/margin_bottom"
             android:text="@string/question_2_answerB"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerA" />
 
         <CheckBox
@@ -128,6 +135,7 @@
             android:layout_marginBottom="@dimen/margin_bottom"
             android:text="@string/question_2_answerC"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerB" />
 
         <CheckBox
@@ -135,6 +143,7 @@
             style="@style/CheckBoxStyle"
             android:text="@string/question_2_answerD"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q2AnswerC" />
 
         <TextView
@@ -162,10 +171,12 @@
 
         <RadioGroup
             android:id="@+id/q3Answers"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/any_width"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q3Text">
@@ -225,6 +236,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/question_4_answerA"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4Text" />
 
         <CheckBox
@@ -233,6 +245,7 @@
             android:layout_marginBottom="8dp"
             android:text="@string/question_4_answerB"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerA" />
 
         <CheckBox
@@ -241,6 +254,7 @@
             android:layout_marginBottom="@dimen/margin_bottom"
             android:text="@string/question_4_answerC"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerB" />
 
         <CheckBox
@@ -248,6 +262,7 @@
             style="@style/CheckBoxStyle"
             android:text="@string/question_4_answerD"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q4AnswerC" />
 
         <TextView
@@ -281,20 +296,61 @@
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:hint="@string/question_5_answer"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
             android:textSize="@dimen/body_textSize"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/q5Text" />
 
+        <TextView
+            android:id="@+id/q5CorrectAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/margin_top"
+            android:gravity="center"
+            android:text="@string/question_5_correctAns"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/question_title_textSize"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/q5Answer" />
+
         <Button
             android:id="@+id/gradeQuiz"
             android:layout_width="@dimen/any_width"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:background="@color/colorPrimary"
+            android:onClick="SubmitGrade"
             android:text="@string/grade"
+            android:textColor="@color/colorAccent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/q5Answer" />
+            app:layout_constraintTop_toBottomOf="@+id/q5CorrectAnswer" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="@dimen/any_width"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/colorPrimary"
+            android:onClick="Reset"
+            android:text="@string/reset"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gradeQuiz" />
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>

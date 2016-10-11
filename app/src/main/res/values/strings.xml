@@ -28,5 +28,7 @@
     <string name="question_4_answerD">D. geometrical scope</string>
     <string name="question_5_text">What is the last index number of an array with 20 elements ?</string>
     <string name="question_5_answer">Enter Answer for Question 5</string>
+    <string name="question_5_correctAns">19</string>
+    <string name="reset">Reset Quiz</string>
     <string name="grade">Grade Quiz</string>
 </resources>
