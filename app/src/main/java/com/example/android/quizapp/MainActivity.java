@@ -10,15 +10,39 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static com.example.android.quizapp.R.id.q1;
+import static com.example.android.quizapp.R.id.q2AnswerA;
+import static com.example.android.quizapp.R.id.q2AnswerB;
 import static com.example.android.quizapp.R.id.q5;
 import static java.sql.Types.NULL;
 
 public class MainActivity extends AppCompatActivity {
 
+    private RadioButton q1Answer;
+    private CheckBox q2AnswerA;
+    private CheckBox q2AnswerB;
+    private RadioButton q3Answer;
+    private CheckBox q4AnswerA;
+    private CheckBox q4AnswerB;
+    private EditText nameInfo;
+    private TextView q5CorrectAns;
+    private EditText q5Answer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Initialize all necessary views
+        q1Answer = (RadioButton) findViewById(R.id.q1AnswerA);
+        q2AnswerA = (CheckBox) findViewById(R.id.q2AnswerA);
+        q2AnswerB = (CheckBox) findViewById(R.id.q2AnswerD);
+        q3Answer = (RadioButton) findViewById(R.id.q3AnswerB);
+        q4AnswerA = (CheckBox) findViewById(R.id.q4AnswerB);
+        q4AnswerB = (CheckBox) findViewById(R.id.q4AnswerC);
+        nameInfo = (EditText) findViewById(R.id.name);
+        q5CorrectAns = (TextView) findViewById(R.id.q5CorrectAnswer);
+        q5Answer = (EditText) findViewById(R.id.q5Answer);
     }
 
     //Function that grades the user and displays toast message
@@ -26,15 +50,6 @@ public class MainActivity extends AppCompatActivity {
         //Set final grade for user
         int finalGrade = GradeLogic();
 
-        //Initialize all necessary views
-        RadioButton q1Answer = (RadioButton) findViewById(R.id.q1AnswerA);
-        CheckBox q2AnswerA = (CheckBox) findViewById(R.id.q2AnswerA);
-        CheckBox q2AnswerB = (CheckBox) findViewById(R.id.q2AnswerD);
-        RadioButton q3Answer = (RadioButton) findViewById(R.id.q3AnswerB);
-        CheckBox q4AnswerA = (CheckBox) findViewById(R.id.q4AnswerB);
-        CheckBox q4AnswerB = (CheckBox) findViewById(R.id.q4AnswerC);
-        EditText nameInfo = (EditText) findViewById(R.id.name);
-        TextView q5CorrectAns = (TextView) findViewById(R.id.q5CorrectAnswer);
 
         //Check if name has been entered
         if (nameInfo.getText().toString().trim().equals("")) {
@@ -66,15 +81,6 @@ public class MainActivity extends AppCompatActivity {
     private int GradeLogic() {
         int grade = 0;
 
-        //Initialize all necessary views
-        RadioButton q1Answer = (RadioButton) findViewById(R.id.q1AnswerA);
-        CheckBox q2AnswerA = (CheckBox) findViewById(R.id.q2AnswerA);
-        CheckBox q2AnswerB = (CheckBox) findViewById(R.id.q2AnswerD);
-        RadioButton q3Answer = (RadioButton) findViewById(R.id.q3AnswerB);
-        CheckBox q4AnswerA = (CheckBox) findViewById(R.id.q4AnswerB);
-        CheckBox q4AnswerB = (CheckBox) findViewById(R.id.q4AnswerC);
-        EditText q5Answer = (EditText) findViewById(R.id.q5Answer);
-
         //If an answer is correct increment grade counter
         if (q1Answer.isChecked()) {
             grade++;
@@ -100,15 +106,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Reset(View view) {
-        RadioButton q1Answer = (RadioButton) findViewById(R.id.q1AnswerA);
-        CheckBox q2AnswerA = (CheckBox) findViewById(R.id.q2AnswerA);
-        CheckBox q2AnswerB = (CheckBox) findViewById(R.id.q2AnswerD);
-        RadioButton q3Answer = (RadioButton) findViewById(R.id.q3AnswerB);
-        CheckBox q4AnswerA = (CheckBox) findViewById(R.id.q4AnswerB);
-        CheckBox q4AnswerB = (CheckBox) findViewById(R.id.q4AnswerC);
-        EditText nameInfo = (EditText) findViewById(R.id.name);
-        TextView q5CorrectAns = (TextView) findViewById(R.id.q5CorrectAnswer);
-
 
         //Reset All Highlighted Answers
         q1Answer.setBackgroundColor(NULL);
